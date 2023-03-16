@@ -1,24 +1,25 @@
-name: Deploy to GitHub Pages
+name: CI
 
 on:
   push:
-    branches:
-      - main # Replace "main" with the name of your main branch
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm ci
+      - name: install
+        run: yarn add --legacy-peer-deps
 
-      - name: Build project
-        run: npm run build
+      - name: build
+        run: yarn build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: deploy pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Replace "./dist" with the path to your build output directory
+          branch: gh-pages
+          folder: ./dist
