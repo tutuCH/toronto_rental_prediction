@@ -9,5 +9,5 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
-  base: "/toronto-rental-prediction/",
+  base: "/toronto_rental_prediction/",
 });

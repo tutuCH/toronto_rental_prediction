@@ -1,7 +1,7 @@
 {
   "name": "toronto_rental_prediction",
-  "homepage": "https://tutuCH.github.io/toronto_rental_prediction",
-  "version": "0.0.0",
+  "homepage": "http://tutuCH.github.io/toronto_rental_prediction",
+  "version": "0.1.0",
   "description": "",
   "scripts": {
     "dev": "vite",

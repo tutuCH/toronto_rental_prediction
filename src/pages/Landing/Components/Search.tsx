@@ -46,9 +46,9 @@ const Search: Component<{onSearchChange: (newSearched: boolean) => void, onPrice
     return true
   }
   const getPrediction = async () => {
-    // if(!inputValidation()) {
-    //   return
-    // }
+    if(!inputValidation()) {
+      return
+    }
     const coordinates = await getLatLongByAddress(address());
     const param: PredictParam = {
       bedroom: bedroom(),
