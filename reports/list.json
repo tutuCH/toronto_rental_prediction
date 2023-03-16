@@ -427,6 +427,15 @@
       "virtual": false
     },
     {
+      "id": "/Users/harrytu/Documents/my-projects/toronto_rental_prediction/node_modules/solid-start/virtual/entry-server.tsx",
+      "deps": [],
+      "plugins": [
+        "vite:load-fallback",
+        "solid"
+      ],
+      "virtual": false
+    },
+    {
       "id": "/Users/harrytu/Documents/my-projects/toronto_rental_prediction/src/components/Result.tsx",
       "deps": [],
       "plugins": [
@@ -437,15 +446,6 @@
     },
     {
       "id": "/Users/harrytu/Documents/my-projects/toronto_rental_prediction/src/components/Search.tsx",
-      "deps": [],
-      "plugins": [
-        "vite:load-fallback",
-        "solid"
-      ],
-      "virtual": false
-    },
-    {
-      "id": "/Users/harrytu/Documents/my-projects/toronto_rental_prediction/src/entry-server.tsx",
       "deps": [],
       "plugins": [
         "vite:load-fallback",
