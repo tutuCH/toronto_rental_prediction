@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { PredictParam } from '../data/dataDef';
-import { ApiList } from './apiList'
+import { API_LIST } from './apiList'
 export const sampleData = {
     "data": {
         "type": "FeatureCollection",
@@ -234,7 +234,7 @@ export const sampleData = {
 export const getLatLongByAddress = async (address: string) => {
     const geocodeApi = {
       method: 'get',
-      url: `${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`,
+      url: `${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`,
       headers: { }
     };
     // const res = await axios.get(`${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`);
@@ -243,7 +243,7 @@ export const getLatLongByAddress = async (address: string) => {
 }
 
 export const getPredictionByUserInput = async (params: PredictParam) => {
-    const res = await axios.get(`${ApiList.getRentalPredictionPrice}`, { params });
+    const res = await axios.get(`${API_LIST.getRentalPredictionPrice}`, { params });
     if(res.status === 200) {
         return res;
     } else {
