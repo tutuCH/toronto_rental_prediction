@@ -2,39 +2,39 @@
   {
     "name": "vite:load-fallback",
     "invokeCount": 55,
-    "totalTime": 1427
+    "totalTime": 1365
   },
   {
     "name": "vite:esbuild",
     "invokeCount": 18,
-    "totalTime": 728
+    "totalTime": 672
   },
   {
     "name": "vite:css",
     "invokeCount": 1,
-    "totalTime": 175
+    "totalTime": 149
   },
   {
     "name": "solid",
     "enforce": "pre",
     "invokeCount": 32,
-    "totalTime": 138
+    "totalTime": 123
+  },
+  {
+    "name": "vite:import-glob",
+    "invokeCount": 1,
+    "totalTime": 7
   },
   {
     "name": "solid-start-file-system-router",
     "enforce": "pre",
     "invokeCount": 5,
-    "totalTime": 8
-  },
-  {
-    "name": "vite:import-glob",
-    "invokeCount": 1,
-    "totalTime": 8
+    "totalTime": 6
   },
   {
     "name": "vite:define",
     "invokeCount": 12,
-    "totalTime": 2
+    "totalTime": 1
   },
   {
     "name": "vite:css-post",
