@@ -1,9 +1,12 @@
 {
-  "name": "rental_frontend",
+  "name": "toronto_rental_prediction",
+  "homepage": "http://tutuCH.github.io/toronto_rental_prediction",
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "predeploy": "yarn build",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "type": "module",
   "devDependencies": {
@@ -19,6 +22,7 @@
     "@solidjs/router": "^0.7.0",
     "axios": "^1.3.4",
     "daisyui": "^2.51.4",
+    "gh-pages": "^5.0.0",
     "solid-icons": "^1.0.4",
     "solid-js": "^1.6.11",
     "solid-start": "^0.2.23",

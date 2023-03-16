@@ -2,7 +2,6 @@ import type { Component } from "solid-js";
 import { createSignal } from "solid-js";
 import Search from "../components/Search";
 import Result from "../components/Result";
-import background from "../assets/image/toronto-background.jpeg"
 const Landing: Component = () => {
   const [searched, setSearched] = createSignal(false);
   const [price, setPrice] = createSignal(0);
