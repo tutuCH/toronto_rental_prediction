@@ -12,7 +12,7 @@ const Result: Component<{ onSearchChange: (newSearched: boolean) => void; price:
   return (
     <div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 h-full flex items-center justify-center">
       <div class="text-center opacity-80 rounded-lg">
-        <p class="text-xl tracking-tight text-green-700 sm:text-4xl">
+        <p class="text-xl tracking-tight text-green-800 sm:text-3xl">
           The Predicted Price is:
         </p>
         <div class="flex items-center gap-1">
@@ -24,7 +24,7 @@ const Result: Component<{ onSearchChange: (newSearched: boolean) => void; price:
 
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <button class="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => restoreDefault()}>Try Again<VsRefresh /></button>
-          <button class="rounded-full py-2.5 px-3.5 btn btn-outline btn-primary" onClick={() => handleRedirect('github')}>Learn more</button>
+          <button class="btn btn-active btn-link" onClick={() => handleRedirect('github')}>Learn more</button>
         </div>
       </div>
     </div>

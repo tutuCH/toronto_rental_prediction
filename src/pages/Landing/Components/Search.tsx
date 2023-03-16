@@ -64,22 +64,22 @@ const Search: Component<{onSearchChange: (newSearched: boolean) => void, onPrice
   };
   return (
     <div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 h-full flex items-center justify-center">
-    <div class="text-center opacity-80 rounded-lg">
-        <h1 class="text-4xl font-bold tracking-tight text-green-800 sm:text-6xl">
-        Rental Price Predictions
-        </h1>
-        <div class="relative mt-4 rounded-md shadow-sm">
-        <textarea
-            class="w-full rounded-3xl h-8 textarea-primary textarea textarea-bordered"
-            placeholder="Start by entering your address"
-            onInput={(e) => setAddress(e.currentTarget.value)}
-        ></textarea>
-        </div>
-        <div class="flex gap-6 justify-center">{roomOptionDiv}</div>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-        <button class="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now<VsArrowRight/></button>
-        </div>
-    </div>
+      <div class="text-center opacity-80 rounded-lg">
+          <h1 class="text-4xl font-bold tracking-tight text-green-800 sm:text-6xl">
+          Rental Price Predictions
+          </h1>
+          <div class="relative mt-4 rounded-md shadow-sm">
+          <textarea
+              class="w-full rounded-3xl h-8 textarea-primary textarea textarea-bordered"
+              placeholder="Start by entering your address"
+              onInput={(e) => setAddress(e.currentTarget.value)}
+          ></textarea>
+          </div>
+          <div class="flex gap-6 justify-center">{roomOptionDiv}</div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+          <button class="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now<VsArrowRight/></button>
+          </div>
+      </div>
     </div>
   );
 };

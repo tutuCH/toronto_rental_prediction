@@ -237,9 +237,9 @@ export const getLatLongByAddress = async (address: string) => {
       url: `${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`,
       headers: { }
     };
-    // const res = await axios.get(`${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`);
-    // return res
-    return sampleData
+    const res = await axios.get(`${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`);
+    return res
+    // return sampleData
 }
 
 export const getPredictionByUserInput = async (params: PredictParam) => {
