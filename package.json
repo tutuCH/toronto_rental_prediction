@@ -6,7 +6,7 @@
     "build": "solid-start build",
     "start": "solid-start start",
     "predeploy": "yarn build",
-    "deploy": "yarn build && gh-pages -d dist"
+    "deploy": "yarn build && gh-pages -d .solid/inspect"
   },
   "type": "module",
   "devDependencies": {
