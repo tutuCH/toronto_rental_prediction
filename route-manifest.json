@@ -1,0 +1,41 @@
+{
+  "/*404": [
+    {
+      "type": "script",
+      "href": "/toronto_rental_prediction/assets/_...404_-6edeae4d.js"
+    },
+    {
+      "type": "script",
+      "href": "/toronto_rental_prediction/assets/entry-client-34f53c38.js"
+    },
+    {
+      "type": "style",
+      "href": "/toronto_rental_prediction/assets/entry-client-8403bf7d.css"
+    }
+  ],
+  "/": [
+    {
+      "type": "script",
+      "href": "/toronto_rental_prediction/assets/index-6c485950.js"
+    },
+    {
+      "type": "script",
+      "href": "/toronto_rental_prediction/assets/entry-client-34f53c38.js"
+    },
+    {
+      "type": "style",
+      "href": "/toronto_rental_prediction/assets/entry-client-8403bf7d.css"
+    }
+  ],
+  "entry-client": [
+    {
+      "type": "script",
+      "href": "/toronto_rental_prediction/assets/entry-client-34f53c38.js"
+    },
+    {
+      "type": "style",
+      "href": "/toronto_rental_prediction/assets/entry-client-8403bf7d.css"
+    }
+  ],
+  "index.html": []
+}
