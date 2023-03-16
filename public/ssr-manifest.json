@@ -1,0 +1,191 @@
+{
+  "\u0000vite/preload-helper": [
+  ],
+  "node_modules/@solidjs/meta/dist/index.jsx": [
+  ],
+  "node_modules/@solidjs/router/dist/components.jsx": [
+  ],
+  "node_modules/@solidjs/router/dist/integration.js": [
+  ],
+  "node_modules/@solidjs/router/dist/lifecycle.js": [
+  ],
+  "node_modules/@solidjs/router/dist/routing.js": [
+  ],
+  "node_modules/@solidjs/router/dist/utils.js": [
+  ],
+  "node_modules/axios/lib/adapters/adapters.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/adapters/xhr.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/axios.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/cancel/CancelToken.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/cancel/CanceledError.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/cancel/isCancel.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/Axios.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/AxiosError.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/AxiosHeaders.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/InterceptorManager.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/buildFullPath.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/dispatchRequest.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/mergeConfig.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/settle.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/core/transformData.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/defaults/index.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/defaults/transitional.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/env/data.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/AxiosURLSearchParams.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/HttpStatusCode.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/bind.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/buildURL.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/combineURLs.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/cookies.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/formDataToJSON.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/isAbsoluteURL.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/isAxiosError.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/isURLSameOrigin.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/null.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/parseHeaders.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/parseProtocol.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/speedometer.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/spread.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/toFormData.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/toURLEncodedForm.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/helpers/validator.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/platform/browser/classes/Blob.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/platform/browser/classes/FormData.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/platform/browser/classes/URLSearchParams.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/platform/browser/index.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/axios/lib/utils.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/solid-icons/lib/index.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/solid-icons/vs/index.js": [
+    "/assets/index-64bb2982.js"
+  ],
+  "node_modules/solid-js/dist/solid.js": [
+  ],
+  "node_modules/solid-js/web/dist/web.js": [
+  ],
+  "node_modules/solid-start/entry-client/StartClient.tsx": [
+  ],
+  "node_modules/solid-start/entry-client/mount.tsx": [
+  ],
+  "node_modules/solid-start/error-boundary/ErrorBoundary.tsx": [
+  ],
+  "node_modules/solid-start/root/Document.tsx": [
+  ],
+  "node_modules/solid-start/root/FileRoutes.tsx": [
+  ],
+  "node_modules/solid-start/root/Scripts.tsx": [
+  ],
+  "node_modules/solid-start/router.tsx": [
+  ],
+  "node_modules/solid-start/server/ServerContext.tsx": [
+  ],
+  "node_modules/solid-start/server/types.tsx": [
+  ],
+  "src/components/Result.tsx": [
+    "/assets/index-64bb2982.js"
+  ],
+  "src/components/Search.tsx": [
+    "/assets/index-64bb2982.js"
+  ],
+  "src/entry-client.tsx": [
+  ],
+  "src/root.css": [
+  ],
+  "src/root.tsx": [
+  ],
+  "src/routes/[...404].tsx": [
+    "/assets/_...404_-d071ecc0.js"
+  ],
+  "src/routes/index.tsx": [
+    "/assets/index-64bb2982.js"
+  ],
+  "src/utils/apiList.tsx": [
+    "/assets/index-64bb2982.js"
+  ],
+  "src/utils/apiServices.tsx": [
+    "/assets/index-64bb2982.js"
+  ]
+}
