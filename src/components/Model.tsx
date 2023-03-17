@@ -1,7 +1,8 @@
-import { API_LIST } from "../utils/apiList";
+import { MODEL_MESSAGES } from "../utils/data";
+
 
 interface ModelProps {
-  id: string,
+  id: keyof typeof MODEL_MESSAGES,
   title?: string,
   content?: string,
   button?: string,
@@ -10,9 +11,7 @@ interface ModelProps {
 }
 const Model = (props: ModelProps) => {
   let { id, title, content, button, isShown, onShown } = props;
-  if(id === API_LIST.apiError){
-    content = "We apologize for the inconvenience, but we have encountered an internet connection error. Please try again later."
-  }
+  content = MODEL_MESSAGES[id];
   return (
     <div>
       <input type="checkbox" id={id} className="modal-toggle" checked={isShown} onChange={() => {onShown(false)}}/>

@@ -1,4 +1,5 @@
 import '../../../index.css'
+import { MdRefresh, } from "react-icons/md";
 interface ResultProps {
   onSearchChange: (newSearched: boolean) => void, 
   price: number,
@@ -26,7 +27,7 @@ const Result = (props: ResultProps) => {
         </div>
 
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => restoreDefault()}>Try Again</button>
+          <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => restoreDefault()}>Try Again <MdRefresh/> </button>
           <button className="btn btn-active btn-link" onClick={() => handleRedirect('github')}>Learn more</button>
         </div>
       </div>
