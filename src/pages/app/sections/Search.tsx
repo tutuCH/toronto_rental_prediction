@@ -25,8 +25,9 @@ function Search(props: SearchProps) {
       key={_}
       onChange={(e: any) => { handleSelectChange(_, e["target"]["value"]); }}
       className="select select-primary max-w-xs rounded-full"
+      defaultValue={_}
     > 
-        <option key={0} disabled selected> {_} </option>
+        <option key={0} disabled> {_} </option>
         { 
           Array.from({ length: maxSelectValue + 1 }, (_, i) => i).map((value) => ( <option key={value} value={value}>{value}</option> ))
         }

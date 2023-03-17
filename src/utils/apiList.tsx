@@ -1,7 +1,7 @@
 export const BACKEND_URL = () => {
-    return 'http://127.0.0.1:5000'
+    return process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_BASE_URL : process.env.REACT_APP_DEV_BASE_URL
 }
 export const API_LIST = {
-    "geoapifyBaseURL": `http://127.0.0.1:5000`,
+    "geoapifyBaseURL": process.env.REACT_APP_GEOAPIFY_BASE_URL,
     "getRentalPredictionPrice": `${BACKEND_URL()}/get-rental-prediction-price`,
 }

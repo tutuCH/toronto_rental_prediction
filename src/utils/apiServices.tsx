@@ -234,7 +234,7 @@ export const sampleData = {
 export const getLatLongByAddress = async (address: string) => {
     const geocodeApi = {
       method: 'get',
-      url: `${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${'geoAPI key'}`,
+      url: `${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`,
       headers: { }
     };
     // const res = await axios.get(`${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`);
