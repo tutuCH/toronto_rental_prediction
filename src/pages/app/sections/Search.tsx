@@ -15,8 +15,9 @@ function Search(props: SearchProps) {
   const [address, setAddress] = useState("");
   const [bedroom, setBedroom] = useState(0);
   const [bathroom, setBathroom] = useState(0);
-  const [isShownApiErrorModel, setIsShownApiErrorModel] = useState(false);
   const [den, setDen] = useState(0);
+  const [isShownApiErrorModel, setIsShownApiErrorModel] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const setters: any = {
     Bedroom: setBedroom,
     Bathroom: setBathroom,
@@ -67,6 +68,7 @@ function Search(props: SearchProps) {
 
   const getPredictedPriceByUserInput = async (param: PredictParam) => {
     const predictedPrice = await getPredictionByUserInput(param);
+    setIsLoading(false)
     if(ApiValidate(predictedPrice)){
       onSearchChange(true);
       onPriceChange(JSON.parse(predictedPrice.data)[0][0])
@@ -78,11 +80,9 @@ function Search(props: SearchProps) {
   }
 
   const getPrediction = async () => {
-    if(!inputValidation()) {
-      return
-    }
+    if(!inputValidation()) return
+    setIsLoading(true)
     const coordinates = await getLatLong();
-    console.log(coordinates)
     if(Array.isArray(coordinates)) {
       const param: PredictParam = {
         bedroom: bedroom,
@@ -98,23 +98,26 @@ function Search(props: SearchProps) {
 
   return (
     <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 h-full flex items-center justify-center">
-      <div className="text-center opacity-80 rounded-lg">
+      { !isLoading &&
+        <div className="text-center opacity-80 rounded-lg">
           <h1 className="text-4xl font-bold tracking-tight text-green-800 sm:text-6xl">
-          Rental Price Predictions
-          </h1>
-          <div className="relative mt-4 rounded-md shadow-sm">
-          <textarea
-              className="w-full rounded-3xl h-8 textarea-primary textarea textarea-bordered"
-              placeholder="Start by entering your address"
-              onInput={(e) => setAddress(e.currentTarget.value)}
-          ></textarea>
-          </div>
-          <div className="flex gap-6 justify-center">{roomOptionDiv}</div>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-          <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now</button>
-          </div>
-      </div>
+            Rental Price Predictions
+            </h1>
+            <div className="relative mt-4 rounded-md shadow-sm">
+            <textarea
+                className="w-full rounded-3xl h-8 textarea-primary textarea textarea-bordered"
+                placeholder="Start by entering your address"
+                onInput={(e) => setAddress(e.currentTarget.value)}
+            ></textarea>
+            </div>
+            <div className="flex gap-6 justify-center">{roomOptionDiv}</div>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now</button>
+            </div>
+        </div>
+      }
       <Model id={API_LIST.apiError} isShown={isShownApiErrorModel} onShown={setIsShownApiErrorModel}/>
+      { isLoading && <progress className="progress progress-primary w-32"></progress>}
     </div>
   );
 }

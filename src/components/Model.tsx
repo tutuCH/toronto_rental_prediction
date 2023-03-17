@@ -15,7 +15,7 @@ const Model = (props: ModelProps) => {
   }
   return (
     <div>
-      <input type="checkbox" id={id} className="modal-toggle" checked={isShown}/>
+      <input type="checkbox" id={id} className="modal-toggle" checked={isShown} onChange={() => {onShown(false)}}/>
       <div className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">{title}</h3>
