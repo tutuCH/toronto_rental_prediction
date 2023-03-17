@@ -4,4 +4,5 @@ export const BACKEND_URL = () => {
 export const API_LIST = {
     "geoapifyBaseURL": process.env.REACT_APP_GEOAPIFY_BASE_URL,
     "getRentalPredictionPrice": `${BACKEND_URL()}/get-rental-prediction-price`,
+    "apiError": 'API_ERROR',
 }

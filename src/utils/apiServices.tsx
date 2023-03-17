@@ -238,11 +238,18 @@ export const getLatLongByAddress = async (address: string) => {
 }
 
 export const getPredictionByUserInput = async (params: PredictParam) => {
-    const res = await axios.get(`${API_LIST.getRentalPredictionPrice}`, { params });
-    if(res.status === 200) {
-        return res;
-    } else {
-        return {"data": "data"}
-        // some error handling
-    } 
+    try{
+        const res = await axios.get(`${API_LIST.getRentalPredictionPrice}`, { params });
+        if(res.status === 200) {
+            return res;
+        } else {
+            return {"data": API_LIST.apiError}
+        } 
+    } catch(error) {
+        return {"data": API_LIST.apiError}
+    }
+}
+
+export const ApiValidate = (apiData: any) => {
+    return apiData.data === API_LIST.apiError ? false : true;
 }

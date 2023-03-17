@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { PredictParam } from "../../../assets/data/dataDef";
-import { getLatLongByAddress, getPredictionByUserInput } from "../../../utils/apiServices";
+
+import { ApiValidate, getLatLongByAddress, getPredictionByUserInput } from "../../../utils/apiServices";
 import '../../../index.css'
+import Model from "../../../components/Model";
+import { API_LIST } from "../../../utils/apiList";
 interface SearchProps {
   onSearchChange: (newSearched: boolean) => void, 
   onPriceChange: (newPrice: number) => void
@@ -12,6 +15,7 @@ function Search(props: SearchProps) {
   const [address, setAddress] = useState("");
   const [bedroom, setBedroom] = useState(0);
   const [bathroom, setBathroom] = useState(0);
+  const [isShownApiErrorModel, setIsShownApiErrorModel] = useState(false);
   const [den, setDen] = useState(0);
   const setters: any = {
     Bedroom: setBedroom,
@@ -50,23 +54,48 @@ function Search(props: SearchProps) {
     }
     return true
   }
+
+  const getLatLong = async () => {
+    const coordinates = await getLatLongByAddress(address);
+    if(ApiValidate(coordinates)){      
+      return [coordinates["data"]["features"][0]["geometry"]["coordinates"][1], coordinates["data"]["features"][0]["geometry"]["coordinates"][0]]
+    } else {
+      setIsShownApiErrorModel(true);
+      return
+    }
+  }
+
+  const getPredictedPriceByUserInput = async (param: PredictParam) => {
+    const predictedPrice = await getPredictionByUserInput(param);
+    if(ApiValidate(predictedPrice)){
+      onSearchChange(true);
+      onPriceChange(JSON.parse(predictedPrice.data)[0][0])
+      return JSON.parse(predictedPrice.data)[0][0];
+    } else {
+      setIsShownApiErrorModel(true);
+      return
+    }
+  }
+
   const getPrediction = async () => {
     if(!inputValidation()) {
       return
     }
-    const coordinates = await getLatLongByAddress(address);
-    const param: PredictParam = {
-      bedroom: bedroom,
-      bathroom: bathroom,
-      den: den,
-      lat: coordinates["data"]["features"][0]["geometry"]["coordinates"][1],
-      long: coordinates["data"]["features"][0]["geometry"]["coordinates"][0],
-    };
-    const predictedPrice = await getPredictionByUserInput(param);
-    onSearchChange(true);
-    onPriceChange(JSON.parse(predictedPrice.data)[0][0])
-    return JSON.parse(predictedPrice.data)[0][0];
-  };  
+    const coordinates = await getLatLong();
+    console.log(coordinates)
+    if(Array.isArray(coordinates)) {
+      const param: PredictParam = {
+        bedroom: bedroom,
+        bathroom: bathroom,
+        den: den,
+        lat: coordinates[0],
+        long: coordinates[1],
+      };
+      return await getPredictedPriceByUserInput(param)
+    }
+
+  };
+
   return (
     <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 h-full flex items-center justify-center">
       <div className="text-center opacity-80 rounded-lg">
@@ -85,6 +114,7 @@ function Search(props: SearchProps) {
           <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now</button>
           </div>
       </div>
+      <Model id={API_LIST.apiError} isShown={isShownApiErrorModel} onShown={setIsShownApiErrorModel}/>
     </div>
   );
 }
