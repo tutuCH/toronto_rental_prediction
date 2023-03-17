@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PredictParam } from "../../../assets/data/dataDef";
-import { MdKeyboardArrowRight, } from "react-icons/md";
+import { MdArrowForward, } from "react-icons/md";
 import { ApiValidate, getLatLongByAddress, getPredictionByUserInput } from "../../../utils/apiServices";
 import '../../../index.css'
 import Model from "../../../components/Model";
@@ -116,9 +116,9 @@ function Search(props: SearchProps) {
                 onInput={(e) => setAddress(e.currentTarget.value)}
             ></textarea>
             </div>
-            <div className="flex gap-6 justify-center">{roomOptionDiv}</div>
+            <div className="flex gap-6 justify-center mt-3">{roomOptionDiv}</div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-            <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now <MdKeyboardArrowRight/> </button>
+            <button className="flex items-center gap-1 rounded-full btn btn-primary" onClick={() => getPrediction()}>Predict Now <MdArrowForward/> </button>
             </div>
         </div>
       }

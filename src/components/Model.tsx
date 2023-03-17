@@ -20,7 +20,7 @@ const Model = (props: ModelProps) => {
           <h3 className="font-bold text-lg">{title}</h3>
           <p className="py-4">{content}</p>
           <div className="modal-action">
-            <button className="btn" onClick={() => {onShown(false)}}>{button || 'Close'}</button>
+            <button className="btn rounded-full" onClick={() => {onShown(false)}}>{button || 'Close'}</button>
           </div>
         </div>
       </div>
