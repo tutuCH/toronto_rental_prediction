@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Search from '../HomePage/sections/Search';
-import Result from '../HomePage/sections/Result';
+import Search from './sections/Search';
+import Result from './sections/Result';
+import '../../index.css'
 
-
-const HomePage = () => {
+const App = () => {
   const [searched, setSearched] = useState(false);
   const [price, setPrice] = useState(0);
   const background = {
@@ -32,4 +32,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default App;

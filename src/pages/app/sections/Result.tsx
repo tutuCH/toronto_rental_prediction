@@ -1,3 +1,4 @@
+import '../../../index.css'
 interface ResultProps {
   onSearchChange: (newSearched: boolean) => void, 
   price: number,

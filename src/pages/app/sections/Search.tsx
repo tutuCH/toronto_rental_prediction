@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PredictParam } from "../../../assets/data/dataDef";
 import { getLatLongByAddress, getPredictionByUserInput } from "../../../utils/apiServices";
+import '../../../index.css'
 interface SearchProps {
   onSearchChange: (newSearched: boolean) => void, 
   onPriceChange: (newPrice: number) => void
@@ -21,15 +22,14 @@ function Search(props: SearchProps) {
   const roomOptions = ["Bedroom", "Bathroom", "Den"];
   const roomOptionDiv = Array.from(roomOptions, (_, i) => (
     <select
-      onChange={(e: any) => {
-        handleSelectChange(_, e["target"]["value"]);
-      }}
+      key={_}
+      onChange={(e: any) => { handleSelectChange(_, e["target"]["value"]); }}
       className="select select-primary max-w-xs rounded-full"
     > 
-        <option disabled selected> {_} </option>
-            {Array.from({ length: maxSelectValue + 1 }, (_, i) => i).map((value) => (
-        <option value={value}>{value}</option>
-      ))}
+        <option key={0} disabled selected> {_} </option>
+        { 
+          Array.from({ length: maxSelectValue + 1 }, (_, i) => i).map((value) => ( <option key={value} value={value}>{value}</option> ))
+        }
     </select>
   ));  
 
