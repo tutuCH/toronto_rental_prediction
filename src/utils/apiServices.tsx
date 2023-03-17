@@ -232,14 +232,9 @@ export const sampleData = {
 
 
 export const getLatLongByAddress = async (address: string) => {
-    const geocodeApi = {
-      method: 'get',
-      url: `${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`,
-      headers: { }
-    };
-    // const res = await axios.get(`${ApiList.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${import.meta.env.VITE_GEOAPIFY_API_KEY}`);
-    // return res
-    return sampleData
+    const res = await axios.get(`${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`);
+    return res
+    // return sampleData
 }
 
 export const getPredictionByUserInput = async (params: PredictParam) => {
@@ -247,8 +242,7 @@ export const getPredictionByUserInput = async (params: PredictParam) => {
     if(res.status === 200) {
         return res;
     } else {
-        console.log('error')
-        return {"data": 'error'}
+        return {"data": "data"}
         // some error handling
     } 
 }
