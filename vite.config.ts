@@ -1,7 +1,7 @@
-import solid from "solid-start/vite";
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/toronto_rental_prediction/",
-  plugins: [solid()],
-});
+  plugins: [react()],
+})

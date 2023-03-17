@@ -1,35 +1,22 @@
 {
-  "name": "toronto_rental_prediction",
-  "homepage": "http://tutuCH.github.io/toronto_rental_prediction",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start",
-    "predeploy": "yarn build",
-    "deploy": "yarn build && gh-pages -d .solid/inspect"
-  },
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "solid-start-node": "^0.2.19",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.2",
-    "@solidjs/router": "^0.7.0",
-    "axios": "^1.3.4",
-    "daisyui": "^2.51.4",
-    "gh-pages": "^5.0.0",
-    "solid-icons": "^1.0.4",
-    "solid-js": "^1.6.11",
-    "solid-start": "^0.2.23",
-    "solid-start-static": "^0.2.23",
-    "undici": "^5.15.1",
-    "vite": "^4.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "engines": {
-    "node": ">=16"
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
   }
 }
