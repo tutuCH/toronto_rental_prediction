@@ -22,7 +22,9 @@ const App = () => {
       />
       <main className="relative backdrop-blur h-full">
       {!searched ? (<Search onSearchChange={handleSearchChange} onPriceChange={handlePriceChange}/>) : <Result onSearchChange={handleSearchChange} price={price}/>}
-        
+      <footer className="fixed bottom-2 flex w-full items-center justify-center text-primary">
+        Note: Our rental price prediction is based on 2018 data. Actual rental prices may vary due to market conditions and other factors.
+      </footer>
       </main>
     </div>
   );
