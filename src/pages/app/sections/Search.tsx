@@ -62,8 +62,15 @@ function Search(props: SearchProps) {
 
   const getLatLong = async () => {
     const coordinates = await getLatLongByAddress(address);
-    if(ApiValidate(coordinates)){      
-      return [coordinates["data"]["features"][0]["geometry"]["coordinates"][1], coordinates["data"]["features"][0]["geometry"]["coordinates"][0]]
+    if(ApiValidate(coordinates)){
+      if(coordinates["data"]["features"][0]["properties"]["city"] === 'Toronto') {
+        return [coordinates["data"]["features"][0]["geometry"]["coordinates"][1], coordinates["data"]["features"][0]["geometry"]["coordinates"][0]]
+      } else {
+        setModelId(MODEL_ID.ADDRESS_OUT_OF_BOUND);
+        setIsShownModel(true);
+        setIsLoading(false)
+        return
+      }
     } else {
       setModelId(MODEL_ID.API_ERROR);
       setIsShownModel(true);
