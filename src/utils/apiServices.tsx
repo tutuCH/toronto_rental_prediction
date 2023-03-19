@@ -232,12 +232,10 @@ export const sampleData = {
 
 
 export const getLatLongByAddress = async (address: string) => {
-    if (process.env.NODE_ENV === 'production'){
-        const res = await axios.get(`${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`);
-        return res
-    } else {
-        return sampleData
-    }
+    const res = await axios.get(`${API_LIST.geoapifyBaseURL}${encodeURIComponent(address)}&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`);
+    return res
+    // for testing purpose
+    // return sampleData
 }
 
 export const getPredictionByUserInput = async (params: PredictParam) => {
