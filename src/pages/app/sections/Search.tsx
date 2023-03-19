@@ -38,18 +38,19 @@ function Search(props: SearchProps) {
     > 
         <option key={-1} disabled> {roomType} </option>
         { 
-          Array.from({ length: maxSelectValue + 1 }, (_, i) => i).map((value) => ( <option key={Number(value)} value={Number(value)}>{Number(value)}</option> ))
+          Array.from({ length: maxSelectValue + 1 }, (_, i) => i).map((value) => ( <option key={Number(value)} value={value}>{Number(value)}</option> ))
         }
     </select>
   ));  
 
   const resetStates = () => {
     setAddress('')
-    setBedroom(0)
-    setBathroom(0)
-    setDen(0)
+    roomOptions.forEach((roomType: string) => {
+      handleSelectChange(roomType, 0)
+    })
     setIsLoading(false)
   }
+
 
   const handleError = (error: keyof typeof MODEL_MESSAGES) => {
     setModelId(error);
