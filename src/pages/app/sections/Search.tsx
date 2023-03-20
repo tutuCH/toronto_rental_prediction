@@ -125,7 +125,7 @@ function Search(props: SearchProps) {
         <div className="text-center opacity-80 rounded-lg">
           <h1 className="text-4xl font-bold tracking-tight text-green-800 sm:text-6xl flex flex-col-reverse">
             Rental Price Predictions
-            <div className="tooltip tooltip-left self-end h-8 w-8" data-tip={noteMessage}>
+            <div className="tooltip opacity-90 tooltip-left self-end h-8 w-8" data-tip={noteMessage}>
               <HiOutlineInformationCircle className="transform scale-50"/>
             </div>
           </h1>
