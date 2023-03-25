@@ -47,7 +47,7 @@ function Search(props: SearchProps) {
     setAddress('')
     roomOptions.forEach((roomType: string) => {
       handleSelectChange(roomType, 0)
-    })
+    })  
     setIsLoading(false)
   }
 
@@ -63,7 +63,7 @@ function Search(props: SearchProps) {
   };
 
   const inputValidation = () => {
-    if([address, bedroom, bathroom, den].some((_) => !_ )) {
+    if([address].some((_) => !_ )) {
       handleError(MODEL_ID.MISSING_INPUT);
       return false
     }
