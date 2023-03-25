@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/toronto_rental_prediction/static/css/main.b530f538.css",
-    "main.js": "/toronto_rental_prediction/static/js/main.6d58f641.js",
+    "main.css": "/toronto_rental_prediction/static/css/main.58f14760.css",
+    "main.js": "/toronto_rental_prediction/static/js/main.d70d0681.js",
     "static/js/787.30cc54c1.chunk.js": "/toronto_rental_prediction/static/js/787.30cc54c1.chunk.js",
     "static/media/toronto-background.jpeg": "/toronto_rental_prediction/static/media/toronto-background.7dbc6f4ade5c1fb098a1.jpeg",
     "index.html": "/toronto_rental_prediction/index.html",
-    "main.b530f538.css.map": "/toronto_rental_prediction/static/css/main.b530f538.css.map",
-    "main.6d58f641.js.map": "/toronto_rental_prediction/static/js/main.6d58f641.js.map",
+    "main.58f14760.css.map": "/toronto_rental_prediction/static/css/main.58f14760.css.map",
+    "main.d70d0681.js.map": "/toronto_rental_prediction/static/js/main.d70d0681.js.map",
     "787.30cc54c1.chunk.js.map": "/toronto_rental_prediction/static/js/787.30cc54c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b530f538.css",
-    "static/js/main.6d58f641.js"
+    "static/css/main.58f14760.css",
+    "static/js/main.d70d0681.js"
   ]
 }
