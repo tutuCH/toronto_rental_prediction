@@ -14,7 +14,7 @@
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+*** https://www.markdownguide.org/basic-syn tax/#reference-style-links
 -->
 
 <!-- PROJECT LOGO -->
@@ -27,6 +27,9 @@
   <h3 align="center">Toronto Rental Price Prediction</h3>
 
   <p align="center">
+    <div>
+      <img src="./public/homepage.png"></img>
+    </div>
     <br />
     <a href="https://github.com/tutuCH/toronto_rental_prediction"><strong>Explore the docs »</strong></a>
     <br />
