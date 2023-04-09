@@ -70,11 +70,21 @@ The website is a rental price predictor for properties in Toronto. It uses a neu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Steps to Train the Model
+1. Gather data from <a href="https://www.kaggle.com/datasets/rajacsp/toronto-apartment-price?resource=download">Kaggle</a>
+2. Use the Geoapify API to convert the address of the rental property to its corresponding longitude and latitude.
+3. Normalize the data, which involves scaling the features to a range of values that are easier to work with.
+4. The Rectified Linear Unit (ReLU) function is then used as the activation function in the neural network model.
+5. The Adam optimizer is chosen to optimize the model's weights and biases during training.
+6. The mean absolute error (MAE) is used as the evaluation metric to assess the accuracy of the model.
+
+Once the model is trained, it can be used to predict rental prices for new addresses in Toronto.
+
 ### Built With
 
-* Frontend --- React
-* <a href="https://github.com/tutuCH/toronto-rental-prediction-backend">Backend --- Flask</a>
-* <a href="https://github.com/tutuCH/toronto_rental_prediction_model">Model --- Tensorflow</a>
+* Frontend &ensp;&ensp;&ensp; React
+* <a href="https://github.com/tutuCH/toronto-rental-prediction-backend">Backend &ensp;&ensp;&ensp;&ensp;Flask</a>
+* <a href="https://github.com/tutuCH/toronto_rental_prediction_model">Model &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Tensorflow</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
