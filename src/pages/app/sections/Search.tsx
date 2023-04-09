@@ -67,10 +67,6 @@ function Search(props: SearchProps) {
       handleError(MODEL_ID.MISSING_INPUT);
       return false
     }
-    if(Number(bedroom) === 0 || Number(bathroom) === 0) {
-      handleError(MODEL_ID.INVALID_INPUT);
-      return false
-    }
     return true
   }
 
